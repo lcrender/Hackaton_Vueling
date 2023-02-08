@@ -32,9 +32,9 @@ This is a format example:
 All fields are required<br>
 You can only send two "type" of trip "Land Trip" or "Air Trip"<br>
 The "cities" array need at least 2 items.<br>
-The  "details" array only acept 2 items as a requirement.<br>
+The  "details" array only acept 2 items as a requirement.<br><br>
 ![Postman Example](https://github.com/lcrender/Hackaton_Vueling/blob/chaza/img/postman.png)
-
+<br>
 ### Edit and Delete a trip
 You can edit or delete a trip using the Id of the trip.<br>
 You can see all trips and the trip Id making a HTTP GET petition to http://localhost:3000/trips <br>
