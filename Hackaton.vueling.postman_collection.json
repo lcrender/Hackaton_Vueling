@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "d4df0922-f1c3-4047-b266-f38545a382d0",
+		"name": "Hackaton",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24852140"
+	},
+	"item": [
+		{
+			"name": "Crate Trips",
+			"item": [
+				{
+					"name": "Bad Trips",
+					"item": [
+						{
+							"name": "Create Trip #1 Bad #1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tripName\": \"Europe Popular Capitals\",\n    \"type\": \"Land \",\n    \"duration\": \"3 days\",\n    \"cities\": [\"Madrid\", \"Paris\", \"London\"],\n    \"details\": [\"Hotel Best Madrid 3*\", \"Hotel Worst Paris 4*\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"trip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Trip #1 Bad #2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tripName\": \"Europe Popular Capitals\",\n    \"type\": \"Land Trip\",\n    \"duration\": \"3 days\",\n    \"cities\": [\"Madrid\", \"Paris\", \"London\"],\n    \"details\": [\"Hotel Worst Paris 4*\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"trip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Trip #1 Bad #3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tripName\": \"Europe Popular Capitals\",\n    \"type\": \"Land Trip\",\n    \"duration\": \"3 days\",\n\n    \"details\": [\"Hotel Best Madrid 3*\", \"Hotel Worst Paris 4*\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"trip"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create Trip #1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tripName\": \"Europe Popular Capitals\",\n    \"type\": \"Land Trip\",\n    \"duration\": \"3 days\",\n    \"cities\": [\"Madrid\", \"Paris\", \"London\"],\n    \"details\": [\"Hotel Best Madrid 3*\", \"Hotel Worst Paris 4*\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Trip #2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tripName\": \"Europe laying out cities\",\n    \"type\": \"Land Trip\",\n    \"duration\": \"3 days\",\n    \"cities\": [\"Berlín\", \"Madrid\"],\n    \"details\": [\"Hotel Best Madrid 3*\", \"Hotel Worst Berlin 4*\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Trip #2 Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tripName\": \"Europe laying out cities\",\n    \"type\": \"Land Trip\",\n    \"duration\": \"3 days\",\n    \"cities\": [\"Berlín\", \"Madrid\"],\n    \"details\": [\"Hotel Best Madrid 3*\", \"Hotel Worst Berlin 4*\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Trip #2 Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tripName\": \"Europe laying out cities\",\n    \"type\": \"Land Trip\",\n    \"duration\": \"3 days\",\n    \"cities\": [\"Berlín\", \"Madrid\"],\n    \"details\": [\"Hotel Best Madrid 3*\", \"Hotel Worst Berlin 4*\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trip/63e40e13fb45335f8ca235bd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trip",
+								"63e40e13fb45335f8ca235bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Trip #3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tripName\": \"Infinite Egipt\",\n    \"type\": \"Air Trip\",\n    \"duration\": \"4 days\",\n    \"cities\": [\"Madrid\", \"القاهرة‎\", \"الأقصر‎\"],\n    \"details\": [{\"departure\":\"Madrid\", \"time\": \"09:00\"},{\"departure\":  \"الأقصر‎\", \"time\": \"10:00\"}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Trip #4 Wrong",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tripName\": \"China\",\n    \"type\": \"Air Trip\",\n    \"duration\": \"2 days\",\n    \"cities\": [\"Barcelona\", \"广州市\", \"北京市\"],\n    \"details\": [{\"departure\":\"Barcelona\", \"time\": \"09:50\"},{\"departure\":  \"北京市\", \"time\": \"12:50\"}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Trip #4 Edited",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tripName\": \"Incredible China\",\n    \"type\": \"Air Trip\",\n    \"duration\": \"10 days\",\n    \"cities\": [\"Barcelona\", \"Madrid\", \"广州市\", \"北京市\"],\n    \"details\": [{\"departure\":\"Madrid\", \"time\": \"09:00\"},{\"departure\":  \"北京市\", \"time\": \"10:00\"}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trip/63e40e24fb45335f8ca235c2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trip",
+								"63e40e24fb45335f8ca235c2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Search 北京市",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cities\": \"北京市\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Madrid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cities\": \"madrid\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search mad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cities\": \"mad\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search arc (B\"arc\"elona)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cities\": \"arc\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search not find",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cities\": \"Buenos Aires\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search 2 characters",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cities\": \"ma\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
