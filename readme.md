@@ -6,10 +6,11 @@ You need to have this two apps running on your server.<br><br>
 ### Run App
 Open a new Terminal<br>
 Use the command `git clone https://github.com/lcrender/Hackaton_Vueling.git`
+Open Proyect folder `cd Hackaton_Vueling`
 Install all dependencies with `npm i`
 You need to create a file called ".env" in the root of the proyect with the MongoDb URI, the JWTSECRET phrase and the PORT, you can rename the .env.template file or make a new .env file and copy & paste this info: <br>
 ```
-MONGODB_URI=localhost:27017/hackaton_vueling
+URI=localhost:27017/hackaton_vueling
 PORT=3000
 JWTSECRET=M@rad0na!
 ```
