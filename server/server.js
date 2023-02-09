@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
+// Middlewares
+app.use(cors());
+
 // Settings
 app.set('port', process.env.PORT || 4000);
 app.use(express.json());
