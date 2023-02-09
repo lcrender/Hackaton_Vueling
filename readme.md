@@ -19,7 +19,7 @@ Save the file and run from the terminal the server with `npm start`<br>
 
 ## How to use the API
 ### Create User Admin
-The first thing you have to do is create a user admin to be able to create trips in the app.<br>
+The first thing you have to do is create a user admin to be able to create trips in the app. In this app version you can only create one admin.<br>
 For this make an HTTP POST request to http://localhost:3000/signup <br>
 You need to send the username and password in a Json format through the body.
 This is a format example:
