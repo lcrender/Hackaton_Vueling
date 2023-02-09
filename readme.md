@@ -5,9 +5,9 @@ This Api was created for Vueling Hackaton (2023) by Alejandro Chazarreta, using 
 You need to have this two apps running on your server.<br><br>
 ### Run App
 Open a new Terminal<br>
-Use the command `git clone https://github.com/lcrender/Hackaton_Vueling.git`
-Open Proyect folder `cd Hackaton_Vueling`
-Install all dependencies with `npm i`
+Use the command `git clone https://github.com/lcrender/Hackaton_Vueling.git`<br>
+Open Proyect folder `cd Hackaton_Vueling`<br>
+Install all dependencies with `npm i`<br>
 You need to create a file called ".env" in the root of the proyect with the MongoDb URI, the JWTSECRET phrase and the PORT, you can rename the .env.template file or make a new .env file and copy & paste this info: <br>
 ```
 URI=localhost:27017/hackaton_vueling
@@ -15,7 +15,7 @@ PORT=3000
 JWTSECRET=M@rad0na!
 ```
 
-Save the file and run from the terminal the server with `npm start`
+Save the file and run from the terminal the server with `npm start`<br>
 
 ## How to use the API
 ### Create User Admin
