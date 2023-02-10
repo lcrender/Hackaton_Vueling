@@ -18,7 +18,7 @@ tripCtrl.createTrip = async (req, res) => {
 		    return res.status(201).json(answer);
         }	
 	} catch (error) {
-		return res.status(401).json(error);
+		return res.status(400).json(error);
 	}
 };
 tripCtrl.viewTrips = async (req, res) => {
@@ -30,7 +30,7 @@ tripCtrl.viewTrips = async (req, res) => {
 			);
 		return res.status(200).json(answer);
 	} catch (error) {
-		return res.status(401).json(error);
+		return res.status(400).json(error);
 	}
 }
 
@@ -41,7 +41,7 @@ tripCtrl.editTrip = async (req, res) => {
 		const answer = await new Answers((message = 'Trip edited.'),(trip = editedTrip));
 		return res.status(201).json(answer);
 	} catch (error) {
-		return res.status(401).json(error);
+		return res.status(400).json(error);
 	}
 };
 tripCtrl.deleteTrip = async (req, res) => {
@@ -50,7 +50,7 @@ tripCtrl.deleteTrip = async (req, res) => {
 		const answer = await new Answers((message = 'Trip deleted.'));
 		return res.status(201).json(answer);
 	} catch (error) {
-		return res.status(401).json(error);
+		return res.status(400).json(error);
 	}
 };
 tripCtrl.searchTrips = async (req, res) => {
@@ -82,7 +82,7 @@ tripCtrl.searchTrips = async (req, res) => {
 			return res.status(200).json(answer);
 		}
 	} catch (error) {
-		return res.status(401).json(error);
+		return res.status(400).json(error);
 	}
 };
 module.exports = tripCtrl;
