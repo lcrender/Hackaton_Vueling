@@ -84,3 +84,6 @@ The app will search and display the trips found in the database.<br>
 The app takes at least three letters from standard input to execute the search.<br>
 You can search with uppercases or lowercases.<br><br>
 I leave in the root directory of the project a collection of postman to carry out load tests and search for trips.<br>
+
+
+![Postman Example](https://github.com/lcrender/Hackaton_Vueling/blob/chaza/img/cloud.jpg)
