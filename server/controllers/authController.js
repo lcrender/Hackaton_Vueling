@@ -7,9 +7,14 @@ const Answers = require('../classes/Answers');
 authCtrl.signUp = async (req, res, next) => {
     const admin = await User.find({})
     if (admin.length === 1) {
-        const answer = await new Answers((message = 'There is one admin. Please Login.'));
+        const answer = await new Answers((message = 'There is already one admin. Please Login.'));
         return res.status(401).json(answer)
-    } else {
+    }
+    if (admin.length > 1) {
+        const answer = await new Answers((message = 'Error in signup. Please contact with the admin'));
+        return res.status(401).json(answer)
+    }
+    else {
         const { username, password} = req.body;
         const user = new User({
             username,

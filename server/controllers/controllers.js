@@ -28,7 +28,7 @@ tripCtrl.viewTrips = async (req, res) => {
 			(message = `Trips find ${allTrips.length}`),
 			(trip = allTrips)
 			);
-		return res.status(401).json(answer);
+		return res.status(200).json(answer);
 	} catch (error) {
 		return res.status(401).json(error);
 	}
@@ -39,7 +39,7 @@ tripCtrl.editTrip = async (req, res) => {
 		const { tripName, type, duration, cities, details } = req.body;
 		const editedTrip = await Trip.findByIdAndUpdate(req.params.id, { tripName, type, duration, cities, details }).lean();
 		const answer = await new Answers((message = 'Trip edited.'),(trip = editedTrip));
-		return res.status(401).json(answer);
+		return res.status(201).json(answer);
 	} catch (error) {
 		return res.status(401).json(error);
 	}
@@ -48,7 +48,7 @@ tripCtrl.deleteTrip = async (req, res) => {
 	try {
 		await Trip.findByIdAndDelete(req.params.id);
 		const answer = await new Answers((message = 'Trip deleted.'));
-		return res.status(401).json(answer);
+		return res.status(201).json(answer);
 	} catch (error) {
 		return res.status(401).json(error);
 	}
@@ -61,7 +61,7 @@ tripCtrl.searchTrips = async (req, res) => {
 				(message = 'Enter at least 3 characters for search.'),
 				(trip = citySearch)
 			);
-			return res.status(401).json(answer);
+			return res.status(200).json(answer);
 		} else {
 			const trips = await Trip.find({ cities: { $regex: citySearch, $options: 'i' } }, { __v: 0 })
 				.sort({ createdAt: 'desc' })
@@ -71,7 +71,7 @@ tripCtrl.searchTrips = async (req, res) => {
 					(message = 'We did not find trips to this city.'),
 					(trip = citySearch)
 				);
-				return res.status(401).json(answer);
+				return res.status(200).json(answer);
 			}
 			if (trips.length === 1) {
 				newMessage = `${trips.length} trip found.`;
@@ -79,7 +79,7 @@ tripCtrl.searchTrips = async (req, res) => {
 				newMessage = `${trips.length} trips found.`;
 			}
 			const answer = await new Answers((message = newMessage), (trip = trips));
-			return res.status(201).json(answer);
+			return res.status(200).json(answer);
 		}
 	} catch (error) {
 		return res.status(401).json(error);
